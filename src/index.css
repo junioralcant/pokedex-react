@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body,
+input,
+textarea,
+button {
+  font: 400 1rem Roboto, sans-serif;
+}
+
+body {
+  color: #fff;
+}
