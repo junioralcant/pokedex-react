@@ -12,7 +12,7 @@ function makeSut(): SutType {
 }
 
 describe('RemoteLoadPokemonList', () => {
-  it('should return a pokemon list ', async () => {
+  it('should return correct a pokemon list', async () => {
     const sut = makeSut();
     jest
       .spyOn(sut, 'list')
