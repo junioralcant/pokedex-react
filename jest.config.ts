@@ -7,9 +7,8 @@ module.exports = {
   transform: {
     '.+\\.(ts|tsx)$': 'ts-jest',
   },
-  isolatedModules: false,
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
-    '\\.scss$': 'identity-obj-proxy',
+    '\\.css$': 'identity-obj-proxy',
   },
 };
