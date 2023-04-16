@@ -2,21 +2,19 @@ import {Skills} from '../skills';
 
 type Props = {
   skills: {name: string}[];
-  idPockemon: string;
+  idPokemon: string;
   img: string;
-  namePockemon: string;
+  namePokemon: string;
 };
 
-export function Card({skills, idPockemon, img, namePockemon}: Props) {
+export function Card({skills, idPokemon, img, namePokemon}: Props) {
   return (
     <div className="flex items-center justify-center relative bg-app-green w-80 h-52 rounded-3xl p-5">
       <span className="absolute top-1 right-2 text-3xl text-white/40">
-        {idPockemon}
+        {idPokemon}
       </span>
       <div className="flex flex-col">
-        <span className="font-bold text-2xl mb-5">
-          {namePockemon}
-        </span>
+        <span className="font-bold text-2xl mb-5">{namePokemon}</span>
         <div className="flex flex-col">
           {skills.map((skill) => (
             <Skills key={skill.name} skill={skill.name} />
