@@ -16,7 +16,7 @@ export function Home() {
     loadPokemon();
   }, []);
   return (
-    <div className="h-screen bg-blue-500 ">
+    <div className="min-h-screen bg-blue-500 ">
       <div className="flex p-6 flex-wrap gap-5 items-center justify-center">
         {pokemons.map((pokemon) => (
           <Card

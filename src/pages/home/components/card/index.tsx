@@ -9,7 +9,7 @@ type Props = {
 
 export function Card({skills, idPokemon, img, namePokemon}: Props) {
   return (
-    <div className="flex items-center justify-center relative bg-app-green w-80 h-52 rounded-3xl p-5">
+    <div className="flex items-center justify-between relative bg-app-green w-80 h-52 rounded-3xl p-5">
       <span className="absolute top-1 right-2 text-3xl text-white/40">
         {idPokemon}
       </span>
