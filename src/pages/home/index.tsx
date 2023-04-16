@@ -3,22 +3,26 @@ import {Card} from './components/card';
 import {list} from '../../service/load-pokemon-list/remote-load-pokemon-list';
 
 export function Home() {
-  const [pokemons, setPokemons] = useState<ILoadPokemonList.Model[]>(
-    []
-  );
+  const [pokemons, setPokemons] = useState<
+    ILoadPokemonList.Model[] | undefined
+  >([]);
 
   useEffect(() => {
     async function loadPokemon() {
-      const pokemons = await list();
-      setPokemons(pokemons);
+      const response = await list();
+      setPokemons(response);
     }
 
     loadPokemon();
   }, []);
+
   return (
     <div className="min-h-screen bg-blue-500 ">
-      <div className="flex p-6 flex-wrap gap-5 items-center justify-center">
-        {pokemons.map((pokemon) => (
+      <div
+        data-testid="box-pokemon"
+        className="flex p-6 flex-wrap gap-5 items-center justify-center"
+      >
+        {pokemons?.map((pokemon) => (
           <Card
             key={pokemon.id}
             skills={pokemon.skills}
