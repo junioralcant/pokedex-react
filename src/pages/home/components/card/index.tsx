@@ -1,13 +1,13 @@
-import {Skills} from '../skills';
+import { Skills } from '../skills';
 
 type Props = {
-  skills: {name: string}[];
+  skills: { name: string }[];
   idPokemon: string;
   img: string;
   namePokemon: string;
 };
 
-export function Card({skills, idPokemon, img, namePokemon}: Props) {
+export function Card({ skills, idPokemon, img, namePokemon }: Props) {
   return (
     <div className="flex items-center justify-between relative bg-app-green w-80 h-52 rounded-3xl p-5">
       <span className="absolute top-1 right-2 text-3xl text-white/40">
