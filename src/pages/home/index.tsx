@@ -1,6 +1,6 @@
-import {useEffect, useState} from 'react';
-import {Card} from './components/card';
-import {list} from '../../service/load-pokemon-list/remote-load-pokemon-list';
+import { useEffect, useState } from 'react';
+import { Card } from './components/card';
+import { list } from '../../service/load-pokemon-list/remote-load-pokemon-list';
 
 export function Home() {
   const [pokemons, setPokemons] = useState<
